@@ -29,4 +29,14 @@
 	</div>
 </div>
 <script>
+	$(document).ready(function(){
+		// Form Submit
+		$("#contact_submit_btn").click(function(){
+			$("#contact_form").submit();
+		});
+		// Back Button
+		$("#contact_cancel_btn").click(function(){
+			location.href = "/#/contacts";
+		});
+	});
 </script>
