@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="page-header">
+		<h1>
+			New Contact
+		</h1>
+	</div>
+	<div class="row">
+		<div class="span6 offset3">
+			<h4 class="widget-header"><i class="icon-user"></i> New Contact Details</h4>
+			<div class="widget-body">
+				<div class="center-align">
+					
+					<form id="contact_form" class="form-horizontal form-signin-signup" ng-submit="addContact()">
+						<input type="text" name="newContactFirstName" placeholder="Firstname" id="new_contact_first_name" ng-model="newFirstName">
+						<input type="text" name="newContactLastName" placeholder="Lastname" id="new_contact_last_name" ng-model="newLastName">
+						
+						<input type="text" name="newContactMobileNumber" placeholder="Mobile" id="new_contact_mobile_number" ng-model="newMobileNumber">
+						<div class="center">
+							<input type="button" id="contact_submit_btn" value="Add Contact" class="btn btn-primary">
+							
+							<input type="button" id="contact_cancel_btn" value="Cancel" class="btn">
+							<!-- <a href="/#/contacts" class="btn">Cancel</a> -->
+						</div>
+					</form>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+</script>

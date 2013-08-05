@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="page-header">
+		<h1>Signin to MyApp</h1>
+	</div>
+	<div class="row">
+		<div class="span6 offset3">
+			<h4 class="widget-header"><i class="icon-lock"></i> Signin to MyApp</h4>
+			<div class="widget-body">
+				<div class="center-align">
+
+					<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-horizontal form-signin-signup"}) do |f| %>
+					<%= f.text_field :email, :placeholder => "Email", :autofocus => true %>
+					<%= f.password_field :password, :placeholder => "Password" %>
+					<div class="remember-me">
+						<% if devise_mapping.rememberable? %>
+						<div class="pull-left">
+							<label class="checkbox"> <%= f.check_box :remember_me %> Remember me </label>
+						</div>
+						<% end %>
+						<div class="pull-right">
+							<a href="#">Forgot password?</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<%= f.submit "Signin", :class => "btn btn-primary btn-large" %>
+					<% end %>
+
+					<h4><i class="icon-question-sign"></i> Don't have an account?</h4>
+					<%= link_to "Signup", new_user_registration_path, :class => "btn btn-large bottom-space" %>
+					<h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
+					<ul class="signin-with-list">
+						<li>
+							<a class="btn-twitter"> <i class="icon-twitter icon-large"></i> Signin with Twitter </a>
+						</li>
+						<li>
+							<a class="btn-facebook"> <i class="icon-facebook icon-large"></i> Signin with Facebook </a>
+						</li>
+						<li>
+							<a class="btn-google"> <i class="icon-google-plus icon-large"></i> Signin with Google </a>
+						</li>
+						<li>
+							<a class="btn-github"> <i class="icon-github icon-large"></i> Signin with Github </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
