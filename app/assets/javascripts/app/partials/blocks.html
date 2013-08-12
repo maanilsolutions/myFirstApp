@@ -4,8 +4,8 @@
 		<div class="span3 bs-docs-sidebar">
 			<ul class="nav nav-list bs-docs-sidenav affix-top">
 				<li class=""><a href="/#/dashboard">Dashboard</a></li>
-				<li class="active"><a href="/#/contacts">Contacts</a></li>
-				<li class=""><a href="/#/blocks">Blocks</a></li>
+				<li class=""><a href="/#/contacts">Contacts</a></li>
+				<li class="active"><a href="/#/blocks">Blocks</a></li>
 				<li class=""><a href="#global">Reports	</a></li>
 			</ul>
 		</div>
@@ -15,8 +15,8 @@
 
 				<div class="page-header">
 					<h3>
-						The Contacts List
-						<a href="/#/contacts/new" class="btn btn-large btn-success pull-right" style="color: white;">+ Add Contact</a>
+						The Blocks List
+						<a href="/#/blocks/new" class="btn btn-large btn-success pull-right" style="color: white;">+ Add Block</a>
 					</h3>
 				</div>
 				
@@ -24,20 +24,16 @@
 					<thead>
 						<tr>
 							<th>First Name</th>
-							<th>Last Name</th>
-							<th>Monile No</th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="contact in contacts">
-							<td>{{contact.first_name}}</td>
-							<td>{{contact.last_name}}</td>
-							<td>{{contact.mobile_number}}</td>
+						<tr ng-repeat="block in blocks">
+							<td>{{block.block_name}}</td>
 							<td style="text-align:center;">
-								<a href="/#/contacts/edit/{{contact.id}}"><span><i class="icon-edit"></i></span></a>
+								<a href="/#/blocks/edit/{{block.id}}"><span><i class="icon-edit"></i></span></a>
 								&nbsp;&nbsp;
-								<a id="contactToDelete" data-toggle="modal" href="#deleteModal" ng-click="getContact()"><span><i class="icon-trash"></i></span></a>
+								<a id="blockToDelete" data-toggle="modal" href="#deleteModal" ng-click="getBlock()"><span><i class="icon-trash"></i></span></a>
 							</td>
 						</tr>
 					</tbody>
@@ -49,16 +45,16 @@
 		    			<h3>Delete Contact</h3>
 		  			</div>
 		  			<div class="modal-body">
-		    			<p>Are you sure you want to delete {{contact.first_name}} {{contact.last_name}}?</p>
+		    			<p>Are you sure you want to delete {{block.block_name}}?</p>
 		  			</div>
 		  			<div class="modal-footer">
 		    			<a href="#" data-dismiss="modal" class="btn">Close</a>
-		    			<a href="#" ng-click="removeContact()" class="btn btn-danger">Delete Contact</a>
+		    			<a href="#" ng-click="removeBlock()" class="btn btn-danger">Delete Block</a>
 		  			</div>
 				</div>
 
 			</div>		
 		</div>
 
-	</div>	
+	</div>
 </div>

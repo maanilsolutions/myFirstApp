@@ -1,5 +1,8 @@
 MyFirstApp::Application.routes.draw do
   
+  resources :blocks
+
+
   resources :contacts
 
 

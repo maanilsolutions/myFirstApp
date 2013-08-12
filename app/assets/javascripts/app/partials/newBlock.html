@@ -1,0 +1,61 @@
+<div class="container">
+	<div class="row">
+		
+		<div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav affix-top">
+				<li class=""><a href="/#/dashboard">Dashboard</a></li>
+				<li class=""><a href="/#/contacts">Contacts</a></li>
+				<li class="active"><a href="/#/blocks">Blocks</a></li>
+				<li class=""><a href="#global">Reports	</a></li>
+			</ul>
+		</div>
+
+		<div class="span9">
+			<div style="margin: 30px 0 0;">
+
+				<div class="page-header">
+					<h3>
+						New Block
+					</h3>
+				</div>
+
+				<div>
+					<div class="span6 offset1">
+						<h4 class="widget-header"><i class="icon-user"></i> New Block Details</h4>
+						<div class="widget-body">
+							<div class="center-align">
+								
+								<form id="block_form" class="form-horizontal form-signin-signup" ng-submit="addBlock()">
+									<input type="text" name="newBlockName" placeholder="Block Name" id="new_block_name" ng-model="newBlockName">
+									
+									<div class="center">
+										<input type="button" id="block_submit_btn" value="Add Block" onClick="add_block()" class="btn btn-primary">
+										
+										<input type="button" id="cancel_btn" value="Cancel" class="btn">
+										<!-- <a href="/#/contacts" class="btn">Cancel</a> -->
+									</div>
+								</form>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$("#cancel_btn").click(function(){
+			location.href = "/#/blocks";
+		});
+	});
+
+	function add_block(){
+		alert("Submit")
+		$("#block_form").submit();
+	}
+</script>
